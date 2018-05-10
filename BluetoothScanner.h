@@ -3,10 +3,6 @@
 #include <string>
 #include <vector>
 
-#define _WINSOCK_DEPRECATED_NO_WARNINGS
-#include <WinSock2.h>
-#include <ws2bth.h>
-
 class BluetoothScanner
 {
 public:

@@ -1,6 +1,9 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include "BluetoothScanner.h"
 
+#define _WINSOCK_DEPRECATED_NO_WARNINGS
+#include <WinSock2.h>
+#include <ws2bth.h>
 #include <bluetoothapis.h>
 
 #pragma comment(lib, "bluetoothapis.lib")
