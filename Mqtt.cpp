@@ -29,15 +29,15 @@ void Mqtt::publish(const char * topic, const void* payload, int payloadLength)
 
 void Mqtt::on_connect(int rc)
 {
-	if (rc == 0)
-	{
-		for (auto&& mapping : m_mappings)
-		{
-			const char* topic = mapping.first.c_str();
-			int qos = 1; // At least once
+	if (rc != 0)
+		return;
 
-			subscribe(NULL, topic, qos);
-		}
+	for (auto&& mapping : m_mappings)
+	{
+		const char* topic = mapping.first.c_str();
+		int qos = 1; // At least once
+
+		subscribe(NULL, topic, qos);
 	}
 }
 
